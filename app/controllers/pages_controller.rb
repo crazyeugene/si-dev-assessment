@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def home
   end
+  def sms 
+    @num = params[:CellNum]
+    @msg = params[:Message]
+  end  
 
 
   
@@ -8,6 +12,5 @@ class PagesController < ApplicationController
     
 #     raise "Action sms in the UsersController is not implemented! received params #{params.to_json}"
 #   end
-
 
 end
