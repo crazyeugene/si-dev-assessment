@@ -1,6 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class = "whiteText">Welcome to My Page</h1>
+<p class = "whiteText">Would you like to send a message ? </p>
 
 <%= form_tag("/sms/send", method: "post") do %>
-<!-- add form elements here -->
+    <div class = "content">
+    <form action="/action_page.php">
+     <label for="cNum">Cell Number</label>
+     <input type="text" id="cNum" name="CellNum"placeholder="cell number" ><br>
+     <label for="msg">Message</label>
+     <input type="text" id="msg" name="Message"placeholder="Message" ><br>
+    <input type="submit" value="Submit" >
+    </form>
+    </div>
 <% end %>
+
+
